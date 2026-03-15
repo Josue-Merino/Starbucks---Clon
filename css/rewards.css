@@ -1,0 +1,782 @@
+:root {
+    --white:#FFFFFF;
+    --black: #0B0B0B;
+    --primary-green: #067646;
+    --light-green: #0B674A;
+    --dark-green: #184739;
+    --grey: #CCCCCC;
+    --pink: #F7F0E4;
+    --brown:#D0D2AA;
+    --dark--brown: #32462F;
+    --navbar-height: 6.4rem;
+}
+
+/* -------- GLOBALES --------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body.rewards-page {
+    font-size: 1.6rem;
+    font-family: sans;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body:not(.rewards-page) {
+    font-size: 1.6rem;
+    font-family: sans;
+}
+
+/* -------- NAVBAR --------- */
+
+header {
+    width: 100%;
+}
+
+.navbar {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 6rem;
+    box-shadow: 0 .4rem .4rem -.4rem #CCCCCC;
+    overflow: visible;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__btn {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.navbar__btn--left {
+    padding: 2rem 1.5rem;
+    position: relative;
+    width: max-content;
+}
+
+.navbar__btn--left:hover {
+    color: var(--light-green);
+}
+
+.navbar__btn--left::after {
+    content: '';
+    position: absolute;
+    background: var(--light-green);
+    height: .6rem;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    transition: width .2s ease;
+}
+
+.navbar__btn--left:hover::after {
+    width: 100%;
+}
+
+.navbar__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__actions--left {
+    padding: .8rem 1.6rem;
+}
+
+.navbar__actions--right {
+    padding: .8rem 1.6rem;
+    gap: .8rem;
+}
+
+.actions__btn {
+    padding: .6rem 1.2rem;
+    border: 1px solid var(--black);
+    border-radius: 1.5rem;
+}
+
+.actions__btn--black {
+    color: var(--white);
+    background-color: var(--black);
+    transition: opacity .2s ease-in;
+}
+
+.actions__btn--black:hover {
+    opacity: .7;
+}
+
+.actions__btn--white {
+    transition: background .2s ease-in;
+}
+
+.actions__btn--white:hover {
+    background-color: #CCCCCC;
+}
+
+/* -------- GRID --------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* -------- ASIDE --------- */
+
+.hero {
+    background: linear-gradient(to top, var(--dark-green), var(--light-green));
+    box-shadow: rgb(204, 204, 204) 7px 0px 4px -4px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    min-height: 100%;
+}
+
+.hero__image {
+    display: block;
+    width: 30rem;
+}
+
+.hero__heading {
+    color: var(--white);
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hero__buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 5rem;
+}
+
+.hero__btn {
+    padding: .6rem 1.2rem;
+    border: 1px solid var(--white);
+    color: var(--white);
+    border-radius: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.hero__btn--white {
+    background-color: var(--white);
+    color: var(--dark-green);
+}
+
+.hero__btn--green {
+    transition: all .2s ease-in;
+}
+
+.hero__btn--green:hover {
+    border-color: var(--light-green);
+    color: var(--light-green);
+}
+
+/* -------- SECTION -> CONTENT --------- */
+
+.content {
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* -------- SECTION -> REWARDS --------- */
+
+.reward {
+    padding: 4rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.reward__heading {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.reward__heading--bold {
+    font-weight: 900;
+}
+
+.reward__grid {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+}
+
+.reward__image {
+    width: 12rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.reward__text {
+    text-align: center;
+}
+
+/* -------- SECTION -> BENEFICIOS --------- */
+
+.beneficios {
+    padding: 4rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.beneficios__text {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.beneficios__grid {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.beneficios__image {
+    display: block;
+    width: 12rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.beneficios__description {
+    text-align: center;
+}
+
+/* -------- SECTION -> STARS --------- */
+
+.stars {
+    background-color: #F1F0EB;
+}
+
+.stars__container {
+    padding: 5rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.stars__heading {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 900;
+}
+
+.stars__grid {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.stars__image {
+    display: block;
+    width: 40rem;
+    margin-bottom: 2rem;
+}
+
+.stars__text {
+    font-weight: 900;
+    text-align: center;
+}
+
+/* -------- SECTION -> HOW WORKS --------- */
+
+.how-works {
+    padding: 4rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.how-works__heading {
+    text-align: center;
+    font-size: 2.1rem;
+}
+
+.how-works__text {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-top: 1rem;
+}
+
+.how-works__grid {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.how-works__card {
+    display: flex;
+    align-items: center;
+}
+
+.how-works__image {
+    display: block;
+    width: 12rem;
+}
+
+.how-works__image--two {
+    display: block;
+    width: 30rem;
+}
+
+/* -------- SECTION -> ORDENA --------- */
+
+.ordena {
+    background-color: #F1F0EB;
+    padding-bottom: 7rem;
+}
+
+.ordena__heading {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 900;
+    padding-top: 5rem;
+}
+
+.ordena__container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.ordena__image {
+    display: block;
+    width: 7rem;
+}
+
+.ordena__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.regalos {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.regalos__image {
+    width: 45rem;
+}
+
+.regalos__bold {
+    font-weight: bold;
+}
+
+/* -------- SECTION -> EXPERIENCIA --------- */
+
+.experiencia {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.experiencia__heading {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.experiencia__image {
+    display: block;
+    width: 30rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+
+.experiencia__text {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.experiencia__links {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 4rem;
+}
+
+.experiencia__subheading {
+    text-align: center;
+    font-size: 1.47rem;
+}
+
+/* -------- SECTION -> CONOCE --------- */
+
+.conoce {
+    background-color: #F1F0EB;
+}
+
+.conoce__container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conoce__image {
+    width: 30rem;
+    display: block;
+}
+
+.conoce__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.conoce__heading {
+    font-size: 2rem;
+}
+
+.conoce__text {
+    font-size: 1.5rem;
+}
+
+.conoce__link {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+/* -------- SECTION -> STARBUCKS REWARDS --------- */
+
+.starbucks-rewards__image {
+    width: 50rem;
+    display: block;
+    margin: 0 auto;
+}
+
+/* -------- FOOTER --------- */
+
+.footer {
+    width: 100%;
+    padding: 3.5rem 0;
+    box-shadow: 0 -3px 3px rgba(0, 0, 0, .1);
+}
+
+.links {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.about__heading,
+.costumer__heading {
+    font-weight: 500;
+}
+
+.about__item,
+.costumer__item {
+    margin-top: 2rem;
+    line-height: 2.5;
+}
+
+.about__link,
+.costumer__link {
+    color: #696969;
+    font-weight: 500;
+}
+
+.divider {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.bottom__footer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.socials {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.socials__logo {
+    width: 3.5rem;
+}
+
+.socials__link {
+    transition: all 0.3s ease;
+}
+
+.socials__link:hover {
+    transform: translateY(-5px);
+    opacity: .5;
+}
+
+.info {
+    margin-top: 5rem;
+}
+
+.info__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.info__link {
+    color: #939393;
+    font-size: 1.5rem;
+}
+
+.rights {
+    text-align: center;
+    color: #939393;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+.code {
+    text-align: center;
+    color: #939393;
+    font-size: .9rem;
+}
+
+/* -------- MEDIA QUERIES --------- */
+
+@media (max-width: 1024px) {
+
+    body.rewards-page {
+        overflow: auto;
+        height: auto;
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+    }
+
+    .hero {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .hero__container {
+        padding: 5rem 2rem 4rem;
+        min-height: auto;
+    }
+
+    .hero__image {
+        width: 22rem;
+    }
+
+    .hero__heading {
+        font-size: 2.8rem;
+    }
+
+    .hero__buttons {
+        gap: 2rem;
+    }
+
+    .content {
+        overflow-y: visible;
+        height: auto;
+    }
+
+    .navbar {
+        padding: 0 2rem;
+    }
+
+    .navbar__actions--left {
+        display: none;
+    }
+
+    .reward__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .beneficios__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .ordena__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stars__container {
+        width: 80%;
+    }
+
+    .stars__image {
+        width: 30rem;
+    }
+
+    .regalos {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .regalos__image {
+        width: 30rem;
+    }
+
+    .experiencia {
+        width: 80%;
+    }
+
+    .conoce__container {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conoce__image {
+        width: 20rem;
+    }
+
+    .starbucks-rewards__image {
+        width: 35rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 1.2rem;
+    }
+
+    .navbar__btn--left {
+        padding: 1.8rem 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .actions__btn {
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .navbar__actions--right {
+        gap: 0.5rem;
+    }
+
+    .hero__image {
+        width: 18rem;
+    }
+
+    .hero__heading {
+        font-size: 2.2rem;
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 80%;
+        gap: 1.2rem;
+    }
+
+    .hero__btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .reward__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .how-works__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ordena__container {
+        grid-template-columns: 1fr;
+    }
+
+    .stars__container {
+        width: 95%;
+        padding: 3rem 1.5rem;
+    }
+
+    .stars__image {
+        width: 100%;
+    }
+
+    .experiencia {
+        width: 95%;
+    }
+
+    .experiencia__image {
+        width: 16rem;
+    }
+
+    .regalos__image {
+        width: 100%;
+    }
+
+    .starbucks-rewards__image {
+        width: 90%;
+    }
+
+    .info__list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

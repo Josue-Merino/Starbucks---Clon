@@ -1,0 +1,255 @@
+@import url("../css/app.css");
+
+:root {
+    --white:#FFFFFF;
+    --black: #0B0B0B;
+    --primary-green: #067646;
+    --light-green: #0B674A;
+    --dark-green: #184739;
+    --grey: #CCCCCC;
+    --pink: #F7F0E4;
+    --brown:#D0D2AA;
+    --dark--brown: #32462F;
+}
+
+/* -------- GLOBALES --------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: sans;
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* -------- SECTION -> INFO --------- */
+
+.info {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 4rem;
+}
+
+.info__enjoy {
+    font-size: 1.6rem;
+}
+
+.info__heading {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.drinks__heading {
+    font-weight: 700;
+    padding-left: 2.7rem;
+    margin: 1rem 0;
+}
+
+/* -------- SECTION -> DRINKS --------- */
+
+.drinks {
+    padding: 2.5rem;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.drinks__image {
+    background-color: var(--dark-green);
+    border-radius: 50%;
+    width: 13rem;
+    margin-bottom: .5rem;
+    border: 5px solid transparent;
+    transition: border .2s ease;
+}
+
+.drinks__image:hover {
+    border: 10px solid var(--primary-green);
+}
+
+/* -------- SECTION -> ALIMENTOS --------- */
+
+.alimentos {
+    padding: 2.5rem;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.alimentos__image {
+    background-color: var(--dark-green);
+    border-radius: 50%;
+    width: 13rem;
+    margin-bottom: .5rem;
+    border: 5px solid transparent;
+    transition: border .2s ease;
+}
+
+.alimentos__image:hover {
+    border: 10px solid var(--primary-green);
+}
+
+/* -------- SECTION -> CAFÉ --------- */
+
+.cafe {
+    padding: 2.5rem;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.cafe__image {
+    background-color: var(--dark-green);
+    border-radius: 50%;
+    width: 13rem;
+    margin-bottom: .5rem;
+    border: 5px solid transparent;
+    transition: border .2s ease;
+}
+
+.cafe__image:hover {
+    border: 10px solid var(--primary-green);
+}
+
+/* -------- MEDIA QUERIES --------- */
+
+@media (min-width: 768px) {
+
+    .info__heading {
+        font-size: 2.7rem;
+    }
+
+    .info__enjoy {
+        font-size: 2rem;
+    }
+
+    .drinks__heading {
+        font-size: 2rem;
+        padding-left: 4rem;
+        margin: 1.5rem 0;
+    }
+
+    .drinks {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .drink__text {
+        font-size: 2rem;
+    }
+
+    .drinks__image {
+        width: 18rem;
+    }
+
+    .alimentos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .alimentos__text {
+        font-size: 2rem;
+    }
+
+    .alimentos__image {
+        width: 18rem;
+    }
+
+    .cafe {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .cafe__text {
+        font-size: 2rem;
+    }
+
+    .cafe__image {
+        width: 18rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .info__heading {
+        font-size: 3rem;
+    }
+
+    .info__enjoy {
+        font-size: 2.2rem;
+    }
+
+    .drinks__heading {
+        font-size: 2rem;
+        padding-left: 7rem;
+        margin: 1.5rem 0;
+    }
+
+    .drinks {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .drinks__image {
+        width: 16.5rem;
+    }
+
+    .alimentos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .alimentos__text {
+        font-size: 1.6rem;
+    }
+
+    .alimentos__image {
+        width: 16.5rem;
+    }
+
+    .cafe {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .cafe__text {
+        font-size: 1.6rem;
+    }
+
+    .cafe__image {
+        width: 16.5rem;
+    }
+}
