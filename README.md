@@ -28,3 +28,12 @@ Se uso position para implementar el hover en el navbar y se termino la página d
 - Se descargarón las imaganes ya que en algunos casos al iniciar la visat previa no cargaban las imágenes.
 - Uso se position y el pseudo elemento after para el hover de los links en el navbar.
 - Al terminar la página se encontraron conflictos del layout en otros tamaños de pantalla
+
+### ACTIVIDAD 07
+Aquí se realizo la parte más complicada ya que se solucionaron conflictos en el diseño en los distintos tamaños de pantalla usando el enfoque Desktop - first y se termino la página del Menú ya responsiva con enfoque Mobile - first:
+
+- Se comenzo con el diseño responsivo de la página principal donde los cambios mas relevantes fueron el uso de grid template areas para cambiar el orden de imágenes y texto al cambiar a tamaño mobile
+- Se aplico el uso de media queries para cambiar tamaño de imágenes, texto y alineación de elemntos como en el footer.
+- En la Página de rewards se ajusto la altura del contenedor de dos columnas para que en pantallas grandes siempre tuviese el 100vh y no tuviear scroll, se evito el conflicto entre el navabr y el contenedor antes mencionado para evitar que fuese empujado por el navbar.
+- En la mayoria de secciones de la página de rewards se cambio el flujo del layout a una columna para que todo se acomodará en ese orden.
+- Se creo la página de del Menú donde se uso el enfoque Mobile - first ya que considero así es mas fácil aplicar los media queries.
