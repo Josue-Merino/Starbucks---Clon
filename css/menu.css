@@ -1,42 +1,4 @@
-@import url("../css/app.css");
-
-:root {
-    --white:#FFFFFF;
-    --black: #0B0B0B;
-    --primary-green: #067646;
-    --light-green: #0B674A;
-    --dark-green: #184739;
-    --grey: #CCCCCC;
-    --pink: #F7F0E4;
-    --brown:#D0D2AA;
-    --dark--brown: #32462F;
-}
-
-/* -------- GLOBALES --------- */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    display: inline-block;
-}
-
-body {
-    font-size: 1.6rem;
-    font-family: sans;
-}
+@import url("../css/global.css");
 
 hr {
     width: 90%;

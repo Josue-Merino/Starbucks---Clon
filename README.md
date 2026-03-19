@@ -1,5 +1,8 @@
 # PROYECTO MODULO 2 BÉCALOS - STARBUCKS CLON
+Descripción: Como proyecto del Módulo 2 del Becalos Tech Challenge se dejo como proyecto hacer un clon de la página de Starbucks México.
+Este repositorio contiene los archivos que sirvieron para el desarrollo del proyecto así como una pequeña bitácora donde se resgistro los cambios más significativos al momento de su desarrollo.
 
+[Visita la Demo](https://josue-merino.github.io/Starbucks---Clon/)
 
 ## Lista de avances del proyecto
 
@@ -37,3 +40,12 @@ Aquí se realizo la parte más complicada ya que se solucionaron conflictos en e
 - En la Página de rewards se ajusto la altura del contenedor de dos columnas para que en pantallas grandes siempre tuviese el 100vh y no tuviear scroll, se evito el conflicto entre el navabr y el contenedor antes mencionado para evitar que fuese empujado por el navbar.
 - En la mayoria de secciones de la página de rewards se cambio el flujo del layout a una columna para que todo se acomodará en ese orden.
 - Se creo la página de del Menú donde se uso el enfoque Mobile - first ya que considero así es mas fácil aplicar los media queries.
+
+### ACTIVIDAD 08 
+En la parte final del proyecto se realizaron grandes cambios donde los pricipales destacan solucion de confilctos en el diseño responsivo, organización de archivos y su contenido y terminar el login y registro del clon.
+
+- Se uso correctamente @import de css para separar variables globales y estilos del navbar y el footer.
+- Se separó por archivo los estilos de cada página permitiendo una mejor organización y uso de estilos globales importandolos desde el global css.
+- Se corriegieron pequeños detalles en el diseño como reemplazo de clases y eliminación de clases, se agruparon algunas reglas que se repetian y se ajustaron los media queries para que fuesen consistentes con el Mobile - first y el Desktop - First.
+- Se termino la página del Login junto con su diseño responsivo.
+- Se termino la página del Registro junto con su diseño responsivo.

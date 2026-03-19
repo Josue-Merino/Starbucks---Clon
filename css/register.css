@@ -1,0 +1,280 @@
+@import url("../css/global.css");
+@import url("../css/login.css");
+
+
+
+/* -------- SECTION -> FORMULARIO --------- */
+
+
+.login__heading {
+    font-size: 1.8rem;
+}
+.login__heading span{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.login__text{
+    color: #686766;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.born-date {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.born-date__heading {
+    font-size: 1.6rem;
+    color: #686766;
+}
+
+.born-date__heading span{
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.born-date__text{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #686766;
+}
+
+
+.born-date__select{
+    width: 8rem;
+    padding: .5rem 1rem;
+    color: #686766;
+    font-weight: 900;
+    background-color: transparent;
+    border: none;
+    border-bottom: .5px solid #686766;
+    margin-right: 2rem;
+
+    transition: color .2s ease-out;
+}
+
+.born-date__select:focus {
+    outline: none;
+    color: #b0adac;
+}
+
+.ingresa{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ingresa__heading {
+    font-size: 2rem;
+}
+
+.ingresa__text {
+    font-size: 1.6rem;
+    color: #686766;
+}
+
+
+.ingresa__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ingresa__label{
+    font-size: 1.6rem;
+    color: #686766;
+}
+
+.ingresa__input {
+    accent-color: var(--primary-green);
+}
+.terminos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.terminos__heading {
+    font-size: 2rem;
+}
+
+.terminos__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.terminos__label {
+    font-size: 1.6rem;
+    color: #686766;
+}
+
+.terminos__label a {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+.terminos__input {
+    accent-color: var(--primary-green);
+}
+
+/* -------- MEDIA QUERIES --------- */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow: auto;
+        height: auto;
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+    }
+
+    .hero {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .heading__sun {
+        padding: 2rem 2rem 50rem;
+    }
+
+    .publicidad__text br {
+        display: block;
+    }
+
+    .unete__text {
+        font-size: 1.8rem;
+    }
+
+    .login__heading {
+        font-size: 1.8rem;
+    }
+    .login__heading span{
+        font-size: 1.4rem;
+    }
+
+    .login__text{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .heading__sun {
+        padding: 3rem;
+        font-size: 3.2rem;
+    }
+
+    .login__form {
+        width: 90%;
+        padding: 5rem 0;
+    }
+
+    .login__heading {
+        font-size: 1.5rem;
+    }
+    .login__heading span{
+        font-size: 1.2rem;
+    }
+
+    .login__text{
+        font-size: 1.45rem;
+    }
+
+
+    .born-date__heading {
+        font-size: 1.4rem;
+        
+    }
+
+    .born-date__heading span{
+        font-size: 1.25rem;
+    }
+
+    .born-date__text{
+        font-size: 1.2rem; 
+    }
+
+
+    .born-date__select{
+        width: 8rem;
+        padding: .5rem 1rem;
+        font-weight: 900;
+        transition: color .2s ease-out;
+    }
+
+    
+    .ingresa__heading,
+    .terminos__heading {
+        font-size: 1.8rem;
+    }
+
+    .ingresa__text {
+        font-size: 1.4rem;
+        
+    }
+
+    .ingresa__label, 
+    .terminos__label {
+        font-size: 1.4rem;
+    }
+
+    .login__text{
+        font-size: 1.45rem;
+    }
+
+
+    .login__input {
+        border-bottom: 1px solid var(--grey);
+    }
+
+    .login__input::placeholder {
+        font-size: 1.5rem;
+    }
+
+    .login__password {
+        font-size: 1.4rem;
+    }
+
+    .login__btn {
+        padding: 1.2rem 3.5rem;
+        border-radius: 4rem;
+    }
+
+    .publicidad__text {
+        padding: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .publicidad__text br {
+        display: block;
+    }
+
+    .unete__container {
+        gap: 1rem;
+    }
+
+    .unete__div {
+        flex-direction: column;
+    }
+
+    .unete__btn {
+        padding: 1.2rem 2rem;
+    }
+
+    .unete__image {
+        margin-top: 2rem;
+        width: 20rem;
+    }
+}

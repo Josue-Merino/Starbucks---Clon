@@ -1,0 +1,272 @@
+@import url("../css/global.css");
+
+/* -------- LAYOUT LOGIN --------- */
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* -------- GRID --------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* -------- ASIDE --------- */
+
+.hero {
+    background: linear-gradient(to top, var(--dark-green), var(--light-green));
+    box-shadow: rgb(204, 204, 204) 7px 0px 4px -4px;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------- SECTION -> CONTENT --------- */
+
+.content {
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* -------- SECTION -> FORMULARIO --------- */
+
+.heading__sun {
+    text-align: center;
+    color: var(--white);
+    font-size: 3.2rem;
+}
+
+.login {
+    background-color: #EDEBE9;
+}
+
+.login__form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 11.5rem 0;
+}
+
+.login__field {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.login__label {
+    font-size: 1.45rem;
+    color: #686766;
+}
+
+.login__label::before {
+    content: "* ";
+    color: red;
+}
+
+.login__input {
+    padding: .8rem .8rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--grey);
+}
+
+.login__input:focus {
+    outline: none;
+    border-bottom: 2px solid #00A862;
+}
+
+.login__input::placeholder {
+    color: #767574;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.login__password {
+    color: var(--primary-green);
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.login__btn {
+    align-self: center;
+    padding: 1.2rem 3.5rem;
+    border: 1px solid #00A862;
+    border-radius: 4rem;
+    color: var(--white);
+    font-weight: 700;
+    background-color: #00A862;
+    font-size: 1.8rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .24), 0 8px 12px rgba(0, 0, 0, .14);;
+}
+
+/* -------- SECTION -> PUBLICIDAD --------- */
+
+.publicidad {
+    background-color: var(--black);
+}
+
+.publicidad__text {
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.publicidad__text br {
+    display: none;
+}
+
+/* -------- SECTION -> ÚNETE A REWARDS --------- */
+
+.unete__container {
+    margin: 0 auto;
+    width: 90%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.unete__heading {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.unete__text {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.unete__btn {
+    margin-top: 2rem;
+    padding: 1.2rem 2rem;
+    border: 1px solid var(--primary-green);
+    border-radius: 4rem;
+    color: var(--primary-green);
+    font-weight: 900;
+    background-color: var(--white);
+}
+
+.unete__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.unete__image {
+    width: 20rem;
+}
+
+/* -------- MEDIA QUERIES --------- */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow: auto;
+        height: auto;
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+    }
+
+    .hero {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .login__form {
+        width: 90%;
+    }
+
+    .heading__sun {
+        padding: 2rem 2rem 50rem;
+    }
+
+    .publicidad__text br {
+        display: block;
+    }
+
+    .unete__text {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .heading__sun {
+        padding: 3rem;
+        font-size: 3.2rem;
+    }
+
+    .login__form {
+        width: 90%;
+        padding: 5rem 0;
+    }
+
+    .login__label {
+        font-size: 1.2rem;
+    }
+
+    .login__input {
+        border-bottom: 1px solid var(--grey);
+    }
+
+    .login__input::placeholder {
+        font-size: 1.5rem;
+    }
+
+    .login__password {
+        font-size: 1.4rem;
+    }
+
+    .login__btn {
+        padding: 1.2rem 3.5rem;
+        border-radius: 4rem;
+    }
+
+    .publicidad__text {
+        padding: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .publicidad__text br {
+        display: block;
+    }
+
+    .unete__container {
+        gap: 1rem;
+    }
+
+    .unete__div {
+        flex-direction: column;
+    }
+
+    .unete__btn {
+        padding: 1.2rem 2rem;
+    }
+
+    .unete__image {
+        margin-top: 2rem;
+        width: 20rem;
+    }
+}

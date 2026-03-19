@@ -1,138 +1,12 @@
-:root {
-    --white:#FFFFFF;
-    --black: #0B0B0B;
-    --primary-green: #067646;
-    --light-green: #0B674A;
-    --dark-green: #184739;
-    --grey: #CCCCCC;
-    --pink: #F7F0E4;
-    --brown:#D0D2AA;
-    --dark--brown: #32462F;
-    --navbar-height: 6.4rem;
-}
+@import url("../css/global.css");
 
-/* -------- GLOBALES --------- */
+/* -------- LAYOUT REWARDS --------- */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    display: inline-block;
-}
-
-body.rewards-page {
-    font-size: 1.6rem;
-    font-family: sans;
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-body:not(.rewards-page) {
-    font-size: 1.6rem;
-    font-family: sans;
-}
-
-/* -------- NAVBAR --------- */
-
-header {
-    width: 100%;
-}
-
-.navbar {
-    background-color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 6rem;
-    box-shadow: 0 .4rem .4rem -.4rem #CCCCCC;
-    overflow: visible;
-}
-
-.navbar__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar__btn {
-    color: var(--black);
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.navbar__btn--left {
-    padding: 2rem 1.5rem;
-    position: relative;
-    width: max-content;
-}
-
-.navbar__btn--left:hover {
-    color: var(--light-green);
-}
-
-.navbar__btn--left::after {
-    content: '';
-    position: absolute;
-    background: var(--light-green);
-    height: .6rem;
-    width: 0;
-    bottom: 0;
-    left: 0;
-    transition: width .2s ease;
-}
-
-.navbar__btn--left:hover::after {
-    width: 100%;
-}
-
-.navbar__actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar__actions--left {
-    padding: .8rem 1.6rem;
-}
-
-.navbar__actions--right {
-    padding: .8rem 1.6rem;
-    gap: .8rem;
-}
-
-.actions__btn {
-    padding: .6rem 1.2rem;
-    border: 1px solid var(--black);
-    border-radius: 1.5rem;
-}
-
-.actions__btn--black {
-    color: var(--white);
-    background-color: var(--black);
-    transition: opacity .2s ease-in;
-}
-
-.actions__btn--black:hover {
-    opacity: .7;
-}
-
-.actions__btn--white {
-    transition: background .2s ease-in;
-}
-
-.actions__btn--white:hover {
-    background-color: #CCCCCC;
 }
 
 /* -------- GRID --------- */
@@ -497,107 +371,11 @@ header {
     margin: 0 auto;
 }
 
-/* -------- FOOTER --------- */
-
-.footer {
-    width: 100%;
-    padding: 3.5rem 0;
-    box-shadow: 0 -3px 3px rgba(0, 0, 0, .1);
-}
-
-.links {
-    margin: 0 auto;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    column-gap: 3rem;
-    margin-bottom: 4rem;
-}
-
-.about__heading,
-.costumer__heading {
-    font-weight: 500;
-}
-
-.about__item,
-.costumer__item {
-    margin-top: 2rem;
-    line-height: 2.5;
-}
-
-.about__link,
-.costumer__link {
-    color: #696969;
-    font-weight: 500;
-}
-
-.divider {
-    margin: 0 auto;
-    width: 90%;
-}
-
-.bottom__footer {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.socials {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-}
-
-.socials__logo {
-    width: 3.5rem;
-}
-
-.socials__link {
-    transition: all 0.3s ease;
-}
-
-.socials__link:hover {
-    transform: translateY(-5px);
-    opacity: .5;
-}
-
-.info {
-    margin-top: 5rem;
-}
-
-.info__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.info__link {
-    color: #939393;
-    font-size: 1.5rem;
-}
-
-.rights {
-    text-align: center;
-    color: #939393;
-    margin-top: 2rem;
-    font-size: 1.4rem;
-}
-
-.code {
-    text-align: center;
-    color: #939393;
-    font-size: .9rem;
-}
-
 /* -------- MEDIA QUERIES --------- */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 
-    body.rewards-page {
+    body {
         overflow: auto;
         height: auto;
         display: block;
@@ -634,14 +412,6 @@ header {
     .content {
         overflow-y: visible;
         height: auto;
-    }
-
-    .navbar {
-        padding: 0 2rem;
-    }
-
-    .navbar__actions--left {
-        display: none;
     }
 
     .reward__grid {
@@ -694,28 +464,11 @@ header {
     }
 }
 
-@media (max-width: 600px) {
-
-    .navbar {
-        padding: 0 1.2rem;
-    }
-
-    .navbar__btn--left {
-        padding: 1.8rem 0.8rem;
-        font-size: 1.2rem;
-    }
-
-    .actions__btn {
-        padding: 0.5rem 1rem;
-        font-size: 1.2rem;
-    }
-
-    .navbar__actions--right {
-        gap: 0.5rem;
-    }
+@media (max-width: 480px) {
 
     .hero__image {
-        width: 18rem;
+        width: 100%;
+        max-width: 18rem;
     }
 
     .hero__heading {
@@ -734,20 +487,61 @@ header {
         width: 100%;
     }
 
+    .reward {
+        padding: 2rem;
+        width: 100%;
+    }
+
     .reward__grid {
         grid-template-columns: 1fr;
+    }
+
+    .reward__image {
+        width: 10rem;
+    }
+
+    .beneficios {
+        padding: 2rem;
+        width: 100%;
     }
 
     .beneficios__grid {
         grid-template-columns: 1fr;
     }
 
+    .beneficios__image {
+        width: 10rem;
+    }
+
+    .how-works {
+        padding: 2rem;
+        width: 100%;
+    }
+
     .how-works__grid {
         grid-template-columns: 1fr;
     }
 
+    .how-works__image {
+        width: 8rem;
+    }
+
+    .how-works__image--two {
+        width: 100%;
+        max-width: 25rem;
+        margin: 0 auto;
+        display: block;
+    }
+
     .ordena__container {
         grid-template-columns: 1fr;
+        width: 95%;
+        gap: 2rem;
+    }
+
+    .ordena__heading {
+        font-size: 1.8rem;
+        padding: 3rem 1.5rem 0;
     }
 
     .stars__container {
@@ -759,6 +553,18 @@ header {
         width: 100%;
     }
 
+    .regalos {
+        width: 95%;
+    }
+
+    .regalos__image {
+        width: 100%;
+    }
+
+    .regalos__text {
+        font-size: 1.4rem;
+    }
+
     .experiencia {
         width: 95%;
     }
@@ -767,16 +573,20 @@ header {
         width: 16rem;
     }
 
-    .regalos__image {
-        width: 100%;
+    .experiencia__links {
+        column-gap: 2rem;
+    }
+
+    .conoce__container {
+        width: 95%;
+        padding: 3rem 1.5rem;
+    }
+
+    .conoce__image {
+        width: 15rem;
     }
 
     .starbucks-rewards__image {
         width: 90%;
-    }
-
-    .info__list {
-        flex-direction: column;
-        align-items: center;
     }
 }
